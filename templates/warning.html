@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Example</title>
+</head>
+<body>
+    <h1>Button Click Example</h1>
+    <form action="/button-click" method="POST">
+        <input type="hidden" name="click_count" value="0">
+        <button type="submit">I have the same problem!</button>
+    </form>
+    <script>
+        // JavaScript code to increment the click count on each button click
+        var clickCountInput = document.querySelector('input[name="click_count"]');
+        var clickCount = parseInt(clickCountInput.value);
+        document.querySelector('button').addEventListener('click', function() {
+            clickCount++;
+            clickCountInput.value = clickCount;
+        });
+    </script>
+</body>
+</html>
